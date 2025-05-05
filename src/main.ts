@@ -13,7 +13,7 @@ const markdowns = async () => {
 (async (document) => {
   const rendering = new marked.Renderer();
 
-  rendering.heading = (text, level, raw) => {
+  rendering.heading = (text, level) => {
     const match = text.match(/\s*\{#([a-zA-Z0-9\-_]+)\}\s*$/);
 
     let id = "";
